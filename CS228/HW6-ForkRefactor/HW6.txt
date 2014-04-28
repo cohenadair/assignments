@@ -1,0 +1,37 @@
+In this assignment, you will refactor the fortune code. The purpose of the refactoring is to move all of the boilerplate code for implementing a forking server to NMUSocket.c.
+
+You will be starting with an implementation of the fortune server code we did in class. To retrieve this code you will need to clone the git repository that holds it.
+
+git clone git@euclid.nmu.edu:fortune
+
+
+STEP 1: Update the code in your copy of the fortune repository to use your new and improved NMUSocket. Check to make sure that the code works and commit that version of the code.
+
+<Getting this far is equivalent to a D on the homework.>
+
+STEP 2: Create a new function in NMUSocket.c called UnixAcceptAndForkService. It should have the following prototype.
+
+void UnixAcceptAndForkService(nmu_socket_t pServerSocket, pFunVS protocol); 
+
+The first argument is the listening socket of the server. The second argument is a pointer to the function that handles the service protocol. In our case, the client should pass in a pointer to the function, handleFortuneProtocol.
+
+The function, UnixAcceptAndForkService, should contain all of the code that handles accepting a new service socket, forking a service process, the parent should close the service socket, the child should close the server socket and handle the protocol by calling the passed in function.
+
+You will have to figure out where the signal handler should be installed. When you are done with this step, there should be no direct references to signals or processes in the fortuneServer. How will you ensure that the signal handler for SIGCHLD only gets installed once?
+
+Check to make sure the code still works.
+
+Commit this version of the code.
+
+<Getting this far is equivalent to a B on the homework.>
+
+STEP 3: Add a method to our socket object called, acceptAndForkService.
+   a) Declare a new pointer to function type called pFunVSH. This function should be declared to return void and take an nmu_socket_t and pFunVS as arguments.
+
+   b) Add a new field to the NMUSocket struct called acceptAndForkService with the type pFunVSH.
+
+   c) Update the socket method that initializes a new socket to set this field to be a pointer to the function UnixAcceptAndForkService.
+
+   d) Update the fortuneServer to use the socket method to accept and fork the service, instead of directly calling UnixAcceptAndForkService.
+
+<Getting this far is equivalent to an A on the homeworkd.>

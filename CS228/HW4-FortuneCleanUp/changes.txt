@@ -1,0 +1,36 @@
+fortuneServer.c
+===============
+
+	- made sure socket was being closed on all error handling
+	- added error handling to all read() and write() commands
+
+	- handleFortuneServerProtocol()
+		- split each switch case into separate functions
+			- handleFortuneRequest
+			- handleFortuneQuit
+		- added break command for the default case
+			
+	- main()
+		- rewritten to support IPv4 andd IPv6, using getaddrinfo
+		- put socket() and bind() into a separate function, handleBinding()
+		- added a handleAccept() function
+		- removed unused var "undone", "n", and "buffer"
+		
+fortuneClient.c
+===============
+
+	- added the option to kill the server with an extra argument of "k"
+	- added handleError() procedure
+	- added error handling to all read() and write() commands
+
+	- handleFortuneProtocol()
+		- converted switch statement to a single if statement
+		- created separate function, handleReply()
+		- removed var "protocolState" as it wasn't needed
+		- converted while loop to a for loop and removed function shouldQuit()
+		
+	- connectToServer()
+		- AF_INET -> AF_UNSPEC for IPv6 support
+		- removed var "returnValue" as it wasn't needed
+		- removed unused var "sockaddr_ipv4"
+	

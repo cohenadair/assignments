@@ -1,0 +1,33 @@
+In this assignment, you will rewrite NMUSocket.c so that it spawns a pthread instead of forking a new process for each client.
+
+Step 1: Identify code that needs to go. 
+The threaded server does not need to set a signal handler. So any code that sets a signal handler will not be needed.
+
+Step 2: Reimplement UnixAcceptAndServe()
+The code to spawn the server thread will live in the function UnixAcceptAndServer(). From the class slides, or your lecture notes figure out how this code should be written.
+
+You will also have to include pthread.h.
+
+Step 3: pthread library
+Before your code will compile and run, you will need to link in the pthread library.
+The makefile has a macro called LIBS. There is a commented out line with -lpthread. This is the flag you need to use to link in the pthread library.
+
+Notes:
+The only file you should have to change is NMUSocket.c. 
+
+To get the extra credit, your source code should be able to conditionally compile to be either a forking server or a threading server. If you choose to go for the extra credit, look in the makefile and notice that there is a commented out definition of CFLAGS that defines THREADED_SERVER.
+
+To mark code as conditionally compiled, use either ifdef or ifndef.
+
+#ifdef THREADED_SERVER
+// code to support threading
+#else
+// code to support forking
+#endif
+
+--OR--
+
+#ifndef THREADED_SERVER
+// code to support forking
+#endif
+ 

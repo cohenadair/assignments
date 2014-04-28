@@ -1,0 +1,3 @@
+Homework Assignment 3
+
+Create a state machine and list the PDU's for the client and server of a Marco Polo game discussed in class.

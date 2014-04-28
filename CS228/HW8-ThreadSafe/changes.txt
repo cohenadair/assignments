@@ -1,0 +1,10 @@
+CHANGES MADE
+============
+
+	- Made fortunes local
+	- Made protocol local
+	- Made state local
+	- Create global variable fortuneMutex of type pthread_mutex_t
+	- Initialized fortuneMutex at beginning of main method
+	- Destroyed fortuneMutex at end of main method
+	- Created critical section in handFortuneRequest used to inc. fortuneIndex safely

@@ -1,0 +1,96 @@
+ENUM dir_t
+	UINT32 N    = 1
+	UINT32 NE   = 2
+	UINT32 E    = 3
+	UINT32 SE   = 4
+	UINT32 S    = 5
+	UINT32 SW   = 6
+	UINT32 W    = 7
+	UINT32 NW   = 8
+	UINT32 STAY = 9
+endENUM
+
+
+STRUCT loc_t
+	UINT32 x
+	UINT32 y
+endSTRUCT
+
+	 
+STRUCT msg_t
+	U8    msg
+	loc_t loc
+endSTRUCT
+
+
+STRUCT client_response_t
+	dir_t  dirToServer
+	dir_t  dirToMove
+	UINT32 distToMove
+endSTRUCT
+
+
+PDU registerSuccess
+	loc_t locaction
+	U8    name
+endPDU
+
+
+PDU registerFail
+	loc_t location
+	U8    name
+	U8    errorMsg
+endPDU
+
+
+PDU marcoMsg
+	msg_t msg
+	loc_t locaction
+endPDU
+
+
+PDU gameOverMsg
+	msg_t msg
+	U8    loser
+endPDU
+
+
+PDU unknownMsg
+	msg_t msg
+	U8    errorMsg
+endPDU
+
+
+PDU respondSuccess
+	dir_t direction
+endPDU
+
+
+PDU respondFail
+	dir_t direction
+	U8    errorMsg
+endPDU
+
+
+PDU getLocSuccess
+	loc_t newLocation
+	loc_t currentLocation
+endPDU
+
+
+PDU getLocFail
+	loc_t newLocation
+	U8    errorMsg
+endPDU
+
+
+PDU gameOver
+	U8 loser
+endPDU
+
+
+PDU unknown
+	U8 errorMsg
+endPDU
+
+

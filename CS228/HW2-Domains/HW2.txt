@@ -1,0 +1,3 @@
+Homework Assignment 2
+
+Use gethostbyname() to print some domain information. Domain name is entered by the user.

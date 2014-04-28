@@ -1,0 +1,116 @@
+PDU init
+	loc_t  loc   
+	UINT32 cnt = 0
+	SEQUENCE OF (cnt)
+		U8    playerName
+		loc_t playerLocation
+endPDU
+
+
+PDU registerSuccess
+	U8     playerName
+	loc_t  playerLocation
+	UINT32 cnt++
+endPDU
+
+
+PDU cntAtMax
+	UINT32 cnt
+	U8     gameIsFullMsg
+endPDU
+
+
+PDU cntLessThanMax
+	UINT32 cnt
+endPDU
+
+
+PDU sendLocSuccess
+	loc_t playerLocation
+endPDU
+
+
+PDU sendLocFail
+	loc_t playerLocation
+	U8    errorMsg
+endPDU
+
+
+PDU registerFail
+	U8     playerName
+ 	loc_t  playerLocation
+	UINT32 cnt++
+	U8     errorMsg
+endPDU
+
+
+PDU sendMarcoSuccess
+	U8    marcoMsg
+	loc_t playerLocation
+endPDU
+
+
+PDU sendMarcoFail
+	U8    marcoMsg
+	loc_t playerLocation
+	U8    errorMsg
+endPDU	
+
+
+PDU getResponseSuccess
+	loc_t playerLocation
+endPDU
+
+
+PDU getResponseFail
+	loc_t playerLocation
+	U8    errorMsg
+endPDU
+
+
+PDU movePlayerSuccess
+	loc_t oldPlayerLocation
+	loc_t newPlayerLocation
+endPDU
+
+
+PDU sendNewLocsSuccess
+	loc_t playerLocation
+endPDU
+
+
+PDU sendNewLocsFail
+	loc_t playerLocation
+	U8    errorMsg
+endPDU
+
+
+PDU movePlayersFail
+	loc_t oldPlayerLocation
+	loc_t newPlayerLocation
+	U8    errorMessage
+endPDU	
+
+
+PDU moveSuccess
+	loc_t oldLoc
+	loc_t newLoc
+endPDU
+
+
+PDU moveFail
+	loc_t oldLoc
+	loc_t newLoc
+	U8    errorMsg
+endPDU
+
+
+PDU gameOver
+	U8 gameOverMsg
+	U8 loser
+endPDU
+
+
+PDU unknown
+	U8 errorMsg
+endPDU

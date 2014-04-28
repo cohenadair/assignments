@@ -1,0 +1,234 @@
+PRINT
+REMOVE a.txt
+SUBMIT a.txt 1
+SUBMIT b.txt 2
+SUBMIT c.txt 3
+PRINT
+PRINT
+PRINT
+PRINT
+SUBMIT a.txt 2
+SUBMIT b.txt 3
+SUBMIT c.txt 1
+PRINT
+PRINT
+PRINT
+PRINT
+SUBMIT a.txt 3
+SUBMIT b.txt 10
+SUBMIT c.txt 1
+REMOVE b.txt
+PRINT
+PRINT
+PRINT
+SUBMIT a.txt 30
+SUBMIT b.txt 20
+SUBMIT a.txt 10
+SUBMIT c.txt 5
+SUBMIT a.txt 3
+REMOVE a.txt
+PRINT
+PRINT
+PRINT
+SUBMIT avuxhbpeda.txt 18
+SUBMIT pkvndnfrhg.txt 16
+SUBMIT dkfqslcipm.txt 51
+SUBMIT gvksowijfa.txt 7
+SUBMIT ckkmlnoaps.txt 87
+SUBMIT drqjbahhzj.txt 28
+SUBMIT mdypkdcyzk.txt 99
+SUBMIT ickhogioor.txt 36
+SUBMIT dsckhclkts.txt 79
+SUBMIT kxxgkjrnqu.txt 78
+SUBMIT foiqdesigv.txt 77
+SUBMIT znpfyzgqbf.txt 35
+SUBMIT nzgmcajlhv.txt 78
+SUBMIT aztorubgrr.txt 74
+SUBMIT mzinzqhkle.txt 40
+SUBMIT odauqzfrwz.txt 22
+SUBMIT bmepzokytg.txt 57
+SUBMIT hrolypipno.txt 62
+SUBMIT nyqjcdmhdd.txt 9
+SUBMIT hieifhskdl.txt 26
+SUBMIT absrswsibs.txt 49
+SUBMIT vzttrxlcie.txt 86
+SUBMIT cmmnvzhrrb.txt 98
+SUBMIT umnewglzyn.txt 48
+SUBMIT hogsqjdajj.txt 82
+SUBMIT koefljnljs.txt 5
+SUBMIT rjgiqrcift.txt 21
+SUBMIT llqumkhtvb.txt 7
+SUBMIT unycnyvifx.txt 19
+SUBMIT nqqapvnmhd.txt 41
+SUBMIT lkusbrltkr.txt 7
+SUBMIT srpaxsahed.txt 54
+SUBMIT xxbwgufxqm.txt 78
+SUBMIT vnzgdecrlg.txt 63
+SUBMIT hnqyvzprfd.txt 22
+SUBMIT yenkmgqcos.txt 21
+SUBMIT hkgslhyijp.txt 39
+SUBMIT gwinxabpxs.txt 16
+SUBMIT oxcozsdufn.txt 46
+SUBMIT qploxydjer.txt 90
+SUBMIT cpwlizcyop.txt 16
+SUBMIT prrjwemanf.txt 88
+SUBMIT cantazvrzk.txt 99
+SUBMIT nngtdwtakp.txt 97
+SUBMIT jbwzdmszzr.txt 90
+SUBMIT obkzbteacy.txt 47
+SUBMIT xzgyrqtyli.txt 89
+SUBMIT ygdjgvkqms.txt 10
+SUBMIT ehibcxdmwr.txt 64
+SUBMIT fvjbubjlqf.txt 42
+SUBMIT eeovmkohty.txt 84
+SUBMIT cumoyoyxsm.txt 40
+SUBMIT xrrmzcbnla.txt 14
+SUBMIT jzgcpxigjt.txt 30
+SUBMIT aabijzrhrv.txt 95
+SUBMIT oeypgaujti.txt 35
+SUBMIT xkzxfdfuxw.txt 90
+SUBMIT oraxppwvil.txt 73
+SUBMIT nnbrxfwzkk.txt 49
+SUBMIT xsvpbodxrr.txt 1
+SUBMIT nybqncvqoq.txt 19
+SUBMIT zyyddtochz.txt 39
+SUBMIT pxxjyhvjvq.txt 91
+SUBMIT eixmcklejz.txt 80
+SUBMIT ksuanbrxmq.txt 19
+SUBMIT riaqkdcivt.txt 2
+SUBMIT mprvuzilfh.txt 57
+SUBMIT xcgxcvftyu.txt 94
+SUBMIT gzrkiwxnlx.txt 96
+SUBMIT rlnpatnmot.txt 77
+SUBMIT offlhvzrzd.txt 50
+SUBMIT pdosnskxey.txt 15
+SUBMIT nnbiswphgh.txt 67
+SUBMIT qqeipgyate.txt 5
+SUBMIT fwoheenrys.txt 14
+SUBMIT fqqrxdlgsy.txt 92
+SUBMIT yoibcibixq.txt 52
+SUBMIT zuzfhwmmul.txt 6
+SUBMIT efjmqicuml.txt 67
+SUBMIT shbotccqjh.txt 95
+SUBMIT kdlrdaprzt.txt 94
+SUBMIT gxyirqwdbq.txt 73
+SUBMIT pscaindnel.txt 10
+SUBMIT ssyouptxcx.txt 94
+SUBMIT jkrcaullig.txt 58
+SUBMIT ygwrbjrqha.txt 95
+SUBMIT qtgbvryjxt.txt 84
+SUBMIT mrhtisorgt.txt 89
+SUBMIT bfsfxlxmkj.txt 55
+SUBMIT bdhblhprde.txt 81
+SUBMIT slwjeapdyp.txt 44
+SUBMIT vnyhxinwfk.txt 61
+SUBMIT xyiyqsucyy.txt 38
+SUBMIT znivcdmixg.txt 2
+SUBMIT vzqgqtdbnk.txt 22
+SUBMIT zzgbxpsbuh.txt 82
+SUBMIT rbyfrbvmxe.txt 26
+SUBMIT bbjoklpqhd.txt 18
+SUBMIT urzhfydmam.txt 54
+SUBMIT hkfhyocvje.txt 59
+REMOVE nqqapvnmhd.txt
+REMOVE obkzbteacy.txt
+REMOVE offlhvzrzd.txt
+REMOVE pscaindnel.txt
+REMOVE oeypgaujti.txt
+REMOVE znivcdmixg.txt
+REMOVE slwjeapdyp.txt
+REMOVE zzgbxpsbuh.txt
+REMOVE jkrcaullig.txt
+REMOVE kxxgkjrnqu.txt
+REMOVE fvjbubjlqf.txt
+REMOVE dkfqslcipm.txt
+REMOVE rlnpatnmot.txt
+REMOVE qqeipgyate.txt
+REMOVE hkfhyocvje.txt
+REMOVE hkgslhyijp.txt
+REMOVE bmepzokytg.txt
+REMOVE koefljnljs.txt
+REMOVE rbyfrbvmxe.txt
+REMOVE xcgxcvftyu.txt
+REMOVE zyyddtochz.txt
+REMOVE hrolypipno.txt
+REMOVE xxbwgufxqm.txt
+REMOVE ssyouptxcx.txt
+REMOVE avuxhbpeda.txt
+REMOVE nzgmcajlhv.txt
+REMOVE aabijzrhrv.txt
+REMOVE xrrmzcbnla.txt
+REMOVE srpaxsahed.txt
+REMOVE xsvpbodxrr.txt
+REMOVE gxyirqwdbq.txt
+REMOVE fwoheenrys.txt
+REMOVE qtgbvryjxt.txt
+REMOVE oraxppwvil.txt
+REMOVE nngtdwtakp.txt
+REMOVE pdosnskxey.txt
+REMOVE jzgcpxigjt.txt
+REMOVE aztorubgrr.txt
+REMOVE zuzfhwmmul.txt
+REMOVE jbwzdmszzr.txt
+REMOVE absrswsibs.txt
+REMOVE gzrkiwxnlx.txt
+REMOVE umnewglzyn.txt
+REMOVE prrjwemanf.txt
+REMOVE cumoyoyxsm.txt
+REMOVE hnqyvzprfd.txt
+REMOVE pkvndnfrhg.txt
+REMOVE bbjoklpqhd.txt
+REMOVE nnbiswphgh.txt
+REMOVE oxcozsdufn.txt
+REMOVE hieifhskdl.txt
+REMOVE ygdjgvkqms.txt
+REMOVE mprvuzilfh.txt
+REMOVE ckkmlnoaps.txt
+REMOVE vnyhxinwfk.txt
+REMOVE ickhogioor.txt
+REMOVE yenkmgqcos.txt
+REMOVE mrhtisorgt.txt
+REMOVE cpwlizcyop.txt
+REMOVE eixmcklejz.txt
+REMOVE gvksowijfa.txt
+REMOVE rjgiqrcift.txt
+REMOVE cantazvrzk.txt
+REMOVE bfsfxlxmkj.txt
+REMOVE xzgyrqtyli.txt
+REMOVE gwinxabpxs.txt
+REMOVE mzinzqhkle.txt
+REMOVE xkzxfdfuxw.txt
+REMOVE nyqjcdmhdd.txt
+REMOVE xyiyqsucyy.txt
+REMOVE drqjbahhzj.txt
+REMOVE fqqrxdlgsy.txt
+REMOVE bdhblhprde.txt
+REMOVE eeovmkohty.txt
+REMOVE odauqzfrwz.txt
+REMOVE dsckhclkts.txt
+REMOVE ehibcxdmwr.txt
+REMOVE shbotccqjh.txt
+REMOVE unycnyvifx.txt
+REMOVE foiqdesigv.txt
+REMOVE cmmnvzhrrb.txt
+REMOVE pxxjyhvjvq.txt
+REMOVE ygwrbjrqha.txt
+REMOVE nybqncvqoq.txt
+REMOVE vnzgdecrlg.txt
+REMOVE vzttrxlcie.txt
+REMOVE efjmqicuml.txt
+REMOVE vzqgqtdbnk.txt
+REMOVE llqumkhtvb.txt
+REMOVE lkusbrltkr.txt
+REMOVE yoibcibixq.txt
+REMOVE hogsqjdajj.txt
+REMOVE ksuanbrxmq.txt
+REMOVE kdlrdaprzt.txt
+REMOVE znpfyzgqbf.txt
+REMOVE nnbrxfwzkk.txt
+REMOVE urzhfydmam.txt
+REMOVE riaqkdcivt.txt
+PRINT
+PRINT
+PRINT
+EXIT
