@@ -1,0 +1,853 @@
+f=makefile.ext; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f ext.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+src/makefiles/makefile.ext:43: ext.dep: No such file or directory
+rm -f ext.dep
+for file in exBitBlt.c exCallback.c exCallC.c exCallSup.c exCOM.c exEndian.c exEnviron.c exError.c exExport.c exInit.c exInQueue.c exLeave.c exMemory.c exMessage.c exOption.c exPrimUtil.c exScanCh.c exSignal.c exThapi.c exTimer.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>ext.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>ext.dep; \
+	done
+src/ext/exBitBlt.c
+src/ext/exCallback.c
+src/ext/exCallC.c
+src/ext/exCallSup.c
+src/ext/exCOM.c
+src/ext/exEndian.c
+src/ext/exEnviron.c
+src/ext/exError.c
+src/ext/exExport.c
+src/ext/exInit.c
+src/ext/exInQueue.c
+src/ext/exLeave.c
+src/ext/exMemory.c
+src/ext/exMessage.c
+src/ext/exOption.c
+src/ext/exPrimUtil.c
+src/ext/exScanCh.c
+src/ext/exSignal.c
+src/ext/exThapi.c
+src/ext/exTimer.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>ext.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>ext.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>ext.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>ext.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>ext.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>ext.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>ext.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>ext.dep; \
+	done
+test -z "" || touch -r makefile ext.dep
+make[1]: `ext.dep' is up to date.
+f=makefile.ext; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exBitBlt.c
+In file included from src/ext/exBitBlt.c:14:
+src/ext/BitBltPlugin.c: In function ‘moduleUnloaded’:
+src/ext/BitBltPlugin.c:2921: warning: implicit declaration of function ‘strcmp’
+src/ext/BitBltPlugin.c: In function ‘primitiveDrawLoopXY’:
+src/ext/BitBltPlugin.c:3478: warning: label ‘l1’ defined but not used
+src/ext/exBitBlt.c: At top level:
+src/ext/BitBltPlugin.c:1430: warning: ‘byteSwapped’ defined but not used
+src/ext/BitBltPlugin.c:1439: warning: ‘checkedIntegerValueOf’ defined but not used
+src/ext/BitBltPlugin.c:2380: warning: ‘floatValueOf’ defined but not used
+src/ext/BitBltPlugin.c:2407: warning: ‘halt’ defined but not used
+src/ext/BitBltPlugin.c:2435: warning: ‘ioLoadFunctionFrom’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exCallback.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exCallC.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exCallSup.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exCOM.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exEndian.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exEnviron.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exError.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exExport.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exInit.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exInQueue.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exLeave.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exMemory.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exMessage.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exOption.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exPrimUtil.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exScanCh.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exSignal.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exThapi.c
+src/ext/exThapi.c: In function ‘NBAPISemaphoreForCurrentProcess’:
+src/ext/exThapi.c:993: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘NBAPIProcessHasAttachedThread’:
+src/ext/exThapi.c:1193: warning: unused variable ‘soopTable’
+src/ext/exThapi.c:1193: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘NBAPIDetachProcessFromThread’:
+src/ext/exThapi.c:1223: warning: unused variable ‘soopTable’
+src/ext/exThapi.c:1223: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘NBAPIGetThreadLevels’:
+src/ext/exThapi.c:1250: warning: unused variable ‘poopTable’
+src/ext/exThapi.c:1250: warning: unused variable ‘soopTable’
+src/ext/exThapi.c:1250: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘NBAPICallbackReturn’:
+src/ext/exThapi.c:1462: warning: unused variable ‘soopTable’
+src/ext/exThapi.c:1462: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘NewIOThread’:
+src/ext/exThapi.c:1626: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘printTInfo’:
+src/ext/exThapi.c:2632: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘printNBAPIList’:
+src/ext/exThapi.c:2667: warning: unused variable ‘poopTable’
+src/ext/exThapi.c:2667: warning: unused variable ‘soopTable’
+src/ext/exThapi.c:2667: warning: unused variable ‘nilOop’
+src/ext/exThapi.c: In function ‘printNBAPI’:
+src/ext/exThapi.c:2679: warning: unused variable ‘poopTable’
+src/ext/exThapi.c:2679: warning: unused variable ‘soopTable’
+src/ext/exThapi.c: At top level:
+src/ext/exThapi.c:2481: warning: ‘DestroyMutex’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exTimer.c
+gcc -r -nostdlib -arch i386 -o ext.o exBitBlt.o exCallback.o exCallC.o exCallSup.o exCOM.o exEndian.o exEnviron.o exError.o exExport.o exInit.o exInQueue.o exLeave.o exMemory.o exMessage.o exOption.o exPrimUtil.o exScanCh.o exSignal.o exThapi.o exTimer.o
+f=makefile.prim; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f prim.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+src/makefiles/makefile.prim:48: prim.dep: No such file or directory
+rm -f prim.dep
+for file in pr.c prArithmetic.c prBytes.c prCtoST.c prDouble.c prFloat.c prHash.c prLarge.c prLinkRegistry.c prSmallDouble.c prUsrSupport.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/prim" || file=src/prim/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>prim.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>prim.dep; \
+	done
+src/prim/pr.c
+src/prim/prArithmetic.c
+src/prim/prBytes.c
+src/prim/prCtoST.c
+src/prim/prDouble.c
+src/prim/prFloat.c
+src/prim/prHash.c
+src/prim/prLarge.c
+src/prim/prLinkRegistry.c
+src/prim/prSmallDouble.c
+src/prim/prUsrSupport.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/prim" || file=src/prim/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>prim.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>prim.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/prim" || file=src/prim/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>prim.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>prim.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/prim" || file=src/prim/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>prim.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>prim.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/prim" || file=src/prim/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>prim.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>prim.dep; \
+	done
+test -z "" || touch -r makefile prim.dep
+make[1]: `prim.dep' is up to date.
+f=makefile.prim; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" INLINE=""
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/pr.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prArithmetic.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prBytes.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prCtoST.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prDouble.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prFloat.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prHash.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prLarge.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prLinkRegistry.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prSmallDouble.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/prim/prUsrSupport.c
+gcc -DNOUPRIMS=1 -DGUILINKED=0 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -o prUdummy.o -c src/prim/prUsrSupport.c
+gcc -DNOUPRIMS=1 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -o prUGdummy.o -c src/prim/prUsrSupport.c
+gcc -r -nostdlib -arch i386 -o prim.o pr.o prArithmetic.o prBytes.o prCtoST.o prDouble.o prFloat.o prHash.o prLarge.o prLinkRegistry.o prSmallDouble.o
+f=makefile.mman; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f mman.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+src/makefiles/makefile.mman:54: mman.dep: No such file or directory
+rm -f mman.dep
+for file in mmAllocate.c mmBecome.c mm.c mmDebug.c mmEnumerate.c mmFinal.c mmFixedSpace.c mmGarbage.c mmIncGC.c mmIncGCCheckMark.c mmInit.c mmLargeSpace.c mmNewSpace.c mmOldRt.c mmOldSpace.c mmOopStack.c mmPermSpace.c mmProcess.c mmResources.c mmRt.c mmScavenge.c mmSnapshot.c mmString.c mmSubscript.c mmSysOop.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/mman" || file=src/mman/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>mman.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>mman.dep; \
+	done
+src/mman/mmAllocate.c
+src/mman/mmBecome.c
+src/mman/mm.c
+src/mman/mmDebug.c
+src/mman/mmEnumerate.c
+src/mman/mmFinal.c
+src/mman/mmFixedSpace.c
+src/mman/mmGarbage.c
+src/mman/mmIncGC.c
+src/mman/mmIncGCCheckMark.c
+src/mman/mmInit.c
+src/mman/mmLargeSpace.c
+src/mman/mmNewSpace.c
+src/mman/mmOldRt.c
+src/mman/mmOldSpace.c
+src/mman/mmOopStack.c
+src/mman/mmPermSpace.c
+src/mman/mmProcess.c
+src/mman/mmResources.c
+src/mman/mmRt.c
+src/mman/mmScavenge.c
+src/mman/mmSnapshot.c
+src/mman/mmString.c
+src/mman/mmSubscript.c
+src/mman/mmSysOop.c
+for file in mmCheckMap.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/mman" || file=src/mman/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>mman.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>mman.dep; \
+	done
+src/mman/mmCheckMap.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/mman" || file=src/mman/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>mman.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>mman.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/mman" || file=src/mman/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>mman.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>mman.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/mman" || file=src/mman/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>mman.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>mman.dep; \
+	done
+test -z "" || touch -r makefile mman.dep
+make[1]: `mman.dep' is up to date.
+f=makefile.mman; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmAllocate.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmBecome.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mm.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmDebug.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmEnumerate.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmFinal.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmFixedSpace.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmGarbage.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmIncGC.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmIncGCCheckMark.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmInit.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmLargeSpace.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmNewSpace.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmOldRt.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmOldSpace.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmOopStack.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmPermSpace.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmProcess.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmResources.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmRt.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmScavenge.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmSnapshot.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmString.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmSubscript.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/mman/mmSysOop.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -O3 -fomit-frame-pointer  -c src/mman/mmCheckMap.c
+gcc -r -nostdlib -arch i386 -o mman.o mmAllocate.o mmBecome.o mm.o mmDebug.o mmEnumerate.o mmFinal.o mmFixedSpace.o mmGarbage.o mmIncGC.o mmIncGCCheckMark.o mmInit.o mmLargeSpace.o mmNewSpace.o mmOldRt.o mmOldSpace.o mmOopStack.o mmPermSpace.o mmProcess.o mmResources.o mmRt.o mmScavenge.o mmSnapshot.o mmString.o mmSubscript.o mmSysOop.o mmCheckMap.o
+f=makefile.stack; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f stack.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+src/makefiles/makefile.stack:51: stack.dep: No such file or directory
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread  -g0 -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -o generate src/stack/generate.c
+./generate structOffsets.h
+rm -f stack.dep
+for file in assertFail.c checks.c contexts.c dnu.c hist.c nlreturn.c nsupport.c primSends.c send.c services.c stackframe.c stackzone.c vmsupport.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/stack" || file=src/stack/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>stack.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>stack.dep; \
+	done
+src/stack/assertFail.c
+src/stack/checks.c
+src/stack/contexts.c
+src/stack/dnu.c
+src/stack/hist.c
+src/stack/nlreturn.c
+src/stack/nsupport.c
+src/stack/primSends.c
+src/stack/send.c
+src/stack/services.c
+src/stack/stackframe.c
+src/stack/stackzone.c
+src/stack/vmsupport.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/stack" || file=src/stack/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>stack.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>stack.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/stack" || file=src/stack/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>stack.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>stack.dep; \
+	done
+for file in glue.m ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/stack" || file=src/stack/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>stack.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>stack.dep; \
+	done
+src/stack/glue.m
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/stack" || file=src/stack/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>stack.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>stack.dep; \
+	done
+test -z "" || touch -r makefile stack.dep
+make[1]: `stack.dep' is up to date.
+f=makefile.stack; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/assertFail.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/checks.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/contexts.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/dnu.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/hist.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/nlreturn.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/nsupport.c
+src/stack/nsupport.c: In function ‘CrtCarefulCallPrim’:
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+src/stack/nsupport.c:329: warning: operation on ‘index’ may be undefined
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/primSends.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/send.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/services.c
+src/stack/services.c:103: warning: ‘anySynchronousRequests’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/stackframe.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/stackzone.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/stack/vmsupport.c
+gcc -E -x assembler-with-cpp -Wp,-P -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 src/stack/glue.m | src/utilities/asmfmt.sh > glue.s ; as -arch i386 -o glue.o glue.s
+gcc -r -nostdlib -arch i386 -o stack.o assertFail.o checks.o contexts.o dnu.o hist.o nlreturn.o nsupport.o primSends.o send.o services.o stackframe.o stackzone.o vmsupport.o glue.o
+f=makefile.tran; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f tran.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" TARGET=procx86
+src/makefiles/makefile.tran:13: tran.dep: No such file or directory
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread  -g0 -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -o tmakeQ src/tran/tmakeQ.c
+./tmakeQ
+rm -f tran.dep
+for file in tcgencode.c tinit.c txprim.c txarith.c txcontrol.c txmem.c txopt.c txsubscript.c tnmprim.c tmain.c tloop.c tspecial.c taux.c taction.c tstack.c tloadstore.c tsubr.c tregs.c tcodes.c tmaptran.c tmaprt.c tprim.c tpic.c taocount.c nmalloc.c nmcompact.c nmlookup.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/tran" || file=src/tran/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>tran.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>tran.dep; \
+	done
+src/tran/tcgencode.c
+src/tran/tinit.c
+src/tran/txprim.c
+src/tran/txarith.c
+src/tran/txcontrol.c
+src/tran/txmem.c
+src/tran/txopt.c
+src/tran/txsubscript.c
+src/tran/tnmprim.c
+src/tran/tmain.c
+src/tran/tloop.c
+src/tran/tspecial.c
+src/tran/taux.c
+src/tran/taction.c
+src/tran/tstack.c
+src/tran/tloadstore.c
+src/tran/tsubr.c
+src/tran/tregs.c
+src/tran/tcodes.c
+src/tran/tmaptran.c
+src/tran/tmaprt.c
+src/tran/tprim.c
+src/tran/tpic.c
+src/tran/taocount.c
+src/tran/nmalloc.c
+src/tran/nmcompact.c
+src/tran/nmlookup.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/tran" || file=src/tran/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>tran.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>tran.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/tran" || file=src/tran/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>tran.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>tran.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/tran" || file=src/tran/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>tran.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>tran.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/tran" || file=src/tran/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>tran.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>tran.dep; \
+	done
+test -z "" || touch -r makefile tran.dep
+make[1]: `tran.dep' is up to date.
+f=makefile.tran; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" TARGET=procx86
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tcgencode.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tinit.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/nmalloc.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/nmcompact.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/nmlookup.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tnmprim.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tmain.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tloop.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tspecial.c
+src/tran/tspecial.c: In function ‘tAddSub’:
+src/tran/tspecial.c:310: warning: unused variable ‘fix2’
+src/tran/tspecial.c: In function ‘tReln’:
+src/tran/tspecial.c:487: warning: unused variable ‘fix2’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/taux.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/taction.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tstack.c
+src/tran/tstack.c: In function ‘tStackInit’:
+src/tran/tstack.c:84: warning: enumeration value ‘stRegIsInt’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stRegInt’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stRegChar’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stRegMax’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stSafeReg’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stLit’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stSpill’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stSafeMem’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stAbs’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stLocProg’ not handled in switch
+src/tran/tstack.c:84: warning: enumeration value ‘stCond’ not handled in switch
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tloadstore.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tsubr.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tregs.c
+src/tran/tregs.c: In function ‘regLoadup’:
+src/tran/tregs.c:376: warning: enumeration value ‘rcUnassigned’ not handled in switch
+src/tran/tregs.c:376: warning: enumeration value ‘rcNotAvailable’ not handled in switch
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tcodes.c
+src/tran/tcodes.c: In function ‘tJmp’:
+src/tran/tcodes.c:168: warning: unused variable ‘jptr’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tmaptran.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tmaprt.c
+src/tran/tmaprt.c: In function ‘printSelectorIfExists’:
+src/tran/tmaprt.c:1668: warning: comparison is always true due to limited range of data type
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tprim.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/tpic.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/taocount.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txprim.c
+src/tran/txprim.c: In function ‘txUseCPrim’:
+src/tran/txprim.c:309: warning: comparison is always true due to limited range of data type
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txarith.c
+src/tran/txarith.c: In function ‘tpMul’:
+src/tran/txarith.c:288: warning: unused variable ‘fix4’
+src/tran/txarith.c:288: warning: unused variable ‘fix2’
+src/tran/txarith.c:288: warning: unused variable ‘fix0’
+src/tran/txarith.c: In function ‘tpHashMultiply’:
+src/tran/txarith.c:344: warning: unused variable ‘fix3’
+src/tran/txarith.c:344: warning: unused variable ‘fix2’
+src/tran/txarith.c: In function ‘tpBitShift’:
+src/tran/txarith.c:584: warning: unused variable ‘fix0’
+src/tran/txarith.c: In function ‘tpBoxedFPArith’:
+src/tran/txarith.c:796: warning: unused variable ‘ffixerr’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txcontrol.c
+src/tran/txcontrol.c: In function ‘tpValueAny’:
+src/tran/txcontrol.c:177: warning: unused variable ‘bptr’
+src/tran/txcontrol.c: In function ‘tpPerform0’:
+src/tran/txcontrol.c:202: warning: unused variable ‘bptr’
+src/tran/txcontrol.c: In function ‘tpPerform1’:
+src/tran/txcontrol.c:224: warning: unused variable ‘bptr’
+src/tran/txcontrol.c: In function ‘trAbortEntry’:
+src/tran/txcontrol.c:318: warning: unused variable ‘bptr’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txmem.c
+src/tran/txmem.c: In function ‘tpNewWithArg’:
+src/tran/txmem.c:567: warning: unused variable ‘bptr’
+src/tran/txmem.c: In function ‘tpNotEquivalent’:
+src/tran/txmem.c:662: warning: unused variable ‘bptr’
+src/tran/txmem.c:662: warning: unused variable ‘fix1’
+src/tran/txmem.c: In function ‘tpEquivalent’:
+src/tran/txmem.c:671: warning: unused variable ‘bptr’
+src/tran/txmem.c:671: warning: unused variable ‘fix1’
+src/tran/txmem.c: In function ‘tpCharAsInt’:
+src/tran/txmem.c:711: warning: unused variable ‘bptr’
+src/tran/txmem.c: In function ‘tpImmAsInt’:
+src/tran/txmem.c:746: warning: unused variable ‘bptr’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txopt.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/tran/txsubscript.c
+src/tran/txsubscript.c: In function ‘tpAtPut’:
+src/tran/txsubscript.c:444: warning: unused variable ‘fixw’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -c src/tran/procx86dis.c
+src/tran/dis.h:114: warning: ‘dise2’ defined but not used
+src/tran/dis.h:128: warning: ‘dise4’ defined but not used
+src/tran/dis.h:266: warning: ‘dis_plp’ defined but not used
+src/tran/dis.h:284: warning: ‘dis_prp’ defined but not used
+src/tran/dis.h:288: warning: ‘dis_prs’ defined but not used
+gcc -r -nostdlib -arch i386 -o tran.o tcgencode.o tinit.o nmalloc.o nmcompact.o nmlookup.o tnmprim.o tmain.o tloop.o tspecial.o taux.o taction.o tstack.o tloadstore.o tsubr.o tregs.o tcodes.o tmaptran.o tmaprt.o tprim.o tpic.o taocount.o txprim.o txarith.o txcontrol.o txmem.o txopt.o txsubscript.o procx86dis.o
+f=makefile.platMacX86; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f plat.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+src/makefiles/makefile.platMacX86:57: plat.dep: No such file or directory
+rm -f plat.dep
+for file in dlopenDynamicLoad.c naSerial.c svr4MapFile.c unx86CallC.c unx86Callback.c unx86Icache.c unxAlarm.c unxDir.c unxECode.c unxError.c unxFile.c unxHerald.c unxIpc.c unxLeave.c unxLoadGUI.c unxMem.c unxMisc.c unxPlat.c unxProc.c unxSig.c unxSock.c unxTime.c unxUtil.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>plat.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>plat.dep; \
+	done
+src/plat/dlopenDynamicLoad.c
+src/plat/naSerial.c
+src/plat/svr4MapFile.c
+src/plat/unx86CallC.c
+src/plat/unx86Callback.c
+src/plat/unx86Icache.c
+src/plat/unxAlarm.c
+src/plat/unxDir.c
+src/plat/unxECode.c
+src/plat/unxError.c
+src/plat/unxFile.c
+src/plat/unxHerald.c
+src/plat/unxIpc.c
+src/plat/unxLeave.c
+src/plat/unxLoadGUI.c
+src/plat/unxMem.c
+src/plat/unxMisc.c
+src/plat/unxPlat.c
+src/plat/unxProc.c
+src/plat/unxSig.c
+src/plat/unxSock.c
+src/plat/unxTime.c
+src/plat/unxUtil.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>plat.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>plat.dep; \
+	done
+for file in macXMain.m macXMisc.m macXSTApplication.m ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>plat.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>plat.dep; \
+	done
+src/plat/macXMain.m
+src/plat/macXMisc.m
+src/plat/macXSTApplication.m
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>plat.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>plat.dep; \
+	done
+for file in macx86CallCglue.s ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>plat.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>plat.dep; \
+	done
+src/plat/macx86CallCglue.s
+test -z "" || touch -r makefile plat.dep
+make[1]: `plat.dep' is up to date.
+f=makefile.platMacX86; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/dlopenDynamicLoad.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/naSerial.c
+src/plat/naSerial.c:21: warning: ‘getTtyOptions’ defined but not used
+src/plat/naSerial.c:32: warning: ‘setTtyOptions’ defined but not used
+src/plat/naSerial.c:47: warning: ‘modemLines’ defined but not used
+src/plat/naSerial.c:60: warning: ‘serialOpen’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/svr4MapFile.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread  -mno-accumulate-outgoing-args -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unx86CallC.c
+src/plat/unx86CallC.c: In function ‘NBAPIReapInnerCall’:
+src/plat/unx86CallC.c:600: warning: enumeration value ‘pointer48Kind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘oopKind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘compositeInRegistersKind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘pointer64Kind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘hResultKind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘wincallResultKind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘reservedResultKind’ not handled in switch
+src/plat/unx86CallC.c:600: warning: enumeration value ‘ARGUMENT_KIND_COUNT’ not handled in switch
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unx86Callback.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unx86Icache.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxAlarm.c
+src/plat/unxSig.h:84: warning: ‘sigClues’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxDir.c
+src/plat/unxDir.c: In function ‘defaultDir’:
+src/plat/unxDir.c:206: warning: the address of ‘pathname’ will always evaluate as ‘true’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxECode.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxError.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxFile.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxHerald.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxIpc.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxLeave.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxLoadGUI.c
+src/plat/unxLoadGUI.c: In function ‘loadGUILibrary’:
+src/plat/unxLoadGUI.c:157: warning: ‘NSCreateObjectFileImageFromFile’ is deprecated (declared at /Developer/SDKs/MacOSX10.5.sdk/usr/include/mach-o/dyld.h:145)
+src/plat/unxLoadGUI.c:162: warning: ‘NSLinkModule’ is deprecated (declared at /Developer/SDKs/MacOSX10.5.sdk/usr/include/mach-o/dyld.h:161)
+src/plat/unxLoadGUI.c:166: warning: ‘NSLookupSymbolInModule’ is deprecated (declared at /Developer/SDKs/MacOSX10.5.sdk/usr/include/mach-o/dyld.h:181)
+src/plat/unxLoadGUI.c:167: warning: ‘NSLookupSymbolInModule’ is deprecated (declared at /Developer/SDKs/MacOSX10.5.sdk/usr/include/mach-o/dyld.h:181)
+src/plat/unxLoadGUI.c:171: warning: ‘NSAddressOfSymbol’ is deprecated (declared at /Developer/SDKs/MacOSX10.5.sdk/usr/include/mach-o/dyld.h:188)
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxMem.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxMisc.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxPlat.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxProc.c
+src/plat/unxSig.h:84: warning: ‘sigClues’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxSig.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxSock.c
+src/plat/unxSock.c: In function ‘primGetHostname’:
+src/plat/unxSock.c:927: warning: the address of ‘buf’ will always evaluate as ‘true’
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxTime.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/unxUtil.c
+src/plat/unxUtil.c: In function ‘setIOsem’:
+src/plat/unxUtil.c:423: warning: large integer implicitly truncated to unsigned type
+src/plat/unxUtil.c: At top level:
+src/plat/unxSig.h:84: warning: ‘sigClues’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXMain.m
+src/plat/macXMain.m: In function ‘oeMain’:
+src/plat/macXMain.m:131: warning: passing argument 1 of ‘setOption’ discards qualifiers from pointer target type
+src/plat/macXMain.m:131: warning: passing argument 2 of ‘setOption’ discards qualifiers from pointer target type
+src/plat/macXMain.m:135: warning: passing argument 2 of ‘setOption’ discards qualifiers from pointer target type
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXMisc.m
+src/plat/macXMisc.m: In function ‘primGetUserDefaultNamed’:
+src/plat/macXMisc.m:87: warning: assignment discards qualifiers from pointer target type
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTApplication.m
+as -arch i386 -o macx86CallCglue.o src/plat/macx86CallCglue.s
+gcc -r -nostdlib -arch i386 -o plat.o dlopenDynamicLoad.o naSerial.o svr4MapFile.o unx86CallC.o unx86Callback.o unx86Icache.o unxAlarm.o unxDir.o unxECode.o unxError.o unxFile.o unxHerald.o unxIpc.o unxLeave.o unxLoadGUI.o unxMem.o unxMisc.o unxPlat.o unxProc.o unxSig.o unxSock.o unxTime.o unxUtil.o macXMain.o macXMisc.o macXSTApplication.o macx86CallCglue.o
+f=makefile.extgui; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f extgui.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common"
+src/makefiles/makefile.extgui:26: extgui.dep: No such file or directory
+rm -f extgui.dep
+for file in exDisplay.c exIO.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>extgui.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>extgui.dep; \
+	done
+src/ext/exDisplay.c
+src/ext/exIO.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>extgui.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>extgui.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>extgui.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>extgui.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>extgui.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>extgui.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/ext" || file=src/ext/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>extgui.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>extgui.dep; \
+	done
+test -z "" || touch -r makefile extgui.dep
+make[1]: `extgui.dep' is up to date.
+f=makefile.extgui; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exDisplay.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/ext/exIO.c
+gcc -r -nostdlib -arch i386 -o extgui.o exDisplay.o exIO.o
+f=makefile.guiMacX; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f platgui.dep AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common"
+src/makefiles/makefile.guiMacX:48: platgui.dep: No such file or directory
+rm -f platgui.dep
+for file in macXLoadGUI.c ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>platgui.dep; \
+		printf '\t$(COMPILE'${inc:+0}')\n' >>platgui.dep; \
+	done
+src/plat/macXLoadGUI.c
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>platgui.dep; \
+		printf '\t$(COMPILEDBGOPT'${inc:+0}')\n' >>platgui.dep; \
+	done
+for file in macXAnim.m macXCanvas.m macXCursor.m macXEvent.m macXFont.m macXGraphics.m macXImage.m macXScreen.m macXSelection.m macXSTAnimation.m macXSTGraphicsContext.m macXSTGUIApplicationDelegate.m macXSTMask.m macXSTPixmap.m macXSTPrintMedium.m macXSTRasterSurface.m macXSTScribe.m macXSTView.m macXSTWindow.m ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>platgui.dep; \
+		printf '\t$(COMPILEOBJC'${inc:+0}')\n' >>platgui.dep; \
+	done
+src/plat/macXAnim.m
+src/plat/macXCanvas.m
+src/plat/macXCursor.m
+src/plat/macXEvent.m
+src/plat/macXFont.m
+src/plat/macXGraphics.m
+src/plat/macXImage.m
+src/plat/macXScreen.m
+src/plat/macXSelection.m
+src/plat/macXSTAnimation.m
+src/plat/macXSTGraphicsContext.m
+src/plat/macXSTGUIApplicationDelegate.m
+src/plat/macXSTMask.m
+src/plat/macXSTPixmap.m
+src/plat/macXSTPrintMedium.m
+src/plat/macXSTRasterSurface.m
+src/plat/macXSTScribe.m
+src/plat/macXSTView.m
+src/plat/macXSTWindow.m
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>platgui.dep; \
+		printf '\t$(ASSEMBLE_GLUE'${inc:+0}')\n' >>platgui.dep; \
+	done
+for file in  ""; do \
+		[ -n "$file" ] || continue; \
+		inc=; \
+		[ -f $file ] && inc="-Isrc/plat" || file=src/plat/$file; \
+		echo $file; \
+		gcc -E -x assembler-with-cpp -Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86 -DFOR_DEPENDENCIES $inc $file  >>platgui.dep; \
+		printf '\t$(ASSEMBLE) %s\n' $file >>platgui.dep; \
+	done
+test -z "" || touch -r makefile platgui.dep
+make[1]: `platgui.dep' is up to date.
+f=makefile.guiMacX; [ -f $f ] || f=src/makefiles/$f; \
+	make -f $f AS="as" ASFLAGS="-arch i386" CC="gcc" CDBGOPT="-O3 -fomit-frame-pointer" CDEFS="-D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG " CPP="gcc -E" HPSSDIR=src LDFLAGS="-r -nostdlib -arch i386" LD="gcc" MAKEDIR=src/makefiles OBJ="o" OBJCFLAGS="" PLATFORM=platMacX86 ASMCPP="gcc -E -x assembler-with-cpp" CDEPOPTS="-Wp,-MM -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread" COPTS_unx86CallC.o=-mno-accumulate-outgoing-args COPTS_generate=-g0 COPTS_tmakeQ=-g0 SDEFS="" SHELL=/bin/sh COPTS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common"
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86  -c src/plat/macXLoadGUI.c
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXAnim.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXCanvas.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXCursor.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXEvent.m
+src/plat/macXEvent.m: In function ‘basicEnqueueAsyncEvent’:
+src/plat/macXEvent.m:854: warning: operation on ‘asyncEventQueueTail’ may be undefined
+src/plat/macXEvent.m: In function ‘basicDequeueAsyncEvent’:
+src/plat/macXEvent.m:870: warning: operation on ‘asyncEventQueueHead’ may be undefined
+src/plat/macXEvent.m: At top level:
+src/plat/macXEvent.m:840: warning: ‘dequeueAsyncEvent’ defined but not used
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXFont.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXGraphics.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXImage.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXScreen.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSelection.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTAnimation.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTGraphicsContext.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTGUIApplicationDelegate.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTMask.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTPixmap.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTPrintMedium.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTRasterSurface.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTScribe.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTView.m
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -fPIC -fno-common   -D_DARWIN_C_SOURCE -D_XOPEN_SOURCE=500 -DLOADABLE_GUI=1 -DMACX_THREADED_GUI=1 -DNBAPI -DPTHREADS -DOE_ASSERT -DOE_DEBUG  -I. -Isrc/include    -Dplatform=platMacX86   -c src/plat/macXSTWindow.m
+gcc -r -nostdlib -arch i386 -o platgui.o macXLoadGUI.o macXAnim.o macXCanvas.o macXCursor.o macXEvent.o macXFont.o macXGraphics.o macXImage.o macXScreen.o macXSelection.o macXSTAnimation.o macXSTGraphicsContext.o macXSTGUIApplicationDelegate.o macXSTMask.o macXSTPixmap.o macXSTPrintMedium.o macXSTRasterSurface.o macXSTScribe.o macXSTView.o macXSTWindow.o
+gcc -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -fsigned-char -g -Wall -Wno-format -Wno-unused-value -pthread -o hpsgui ext.o prim.o mman.o stack.o tran.o plat.o extgui.o platgui.o prUGdummy.o -framework AppKit -lz
