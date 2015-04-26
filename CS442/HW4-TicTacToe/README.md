@@ -34,21 +34,21 @@ Homework 4 - RMI Game
 3. Turn off the Windows firewall
 4. Compile everything on UNIX and Windows
 
-    javac *java
+>javac *java
 
 5. Generate all the stubs on the Unix side so the client can run
 
-    rmic -keep Client
-    rmic -keep RemoteObject
+>rmic -keep Client
+>rmic -keep RemoteObject
 
 6. Copy stubs to Windows
 7. Run the server
 
-    java -Djava.security.policy=policy.txt Server
+>java -Djava.security.policy=policy.txt Server
 
 9. Run two applets on Windows
 
-    appletviewer -J"-Djava.security.policy=policy.txt" Client.html
+>appletviewer -J"-Djava.security.policy=policy.txt" Client.html
 
 Due: Thursday, March 12th 2015.
 
