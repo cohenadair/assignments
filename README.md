@@ -11,3 +11,6 @@ Classes included (in order taken):
 * CS228 Network Programming (C)
 * CS322 Programming Languages (Perl, Scheme, SmallTalk)
 * CS344 iOS Programming (Objective-C)
+* CS326 Object Oriented Design
+* CS422 Algorithm Analysis
+* CS442 Advanced Networking (C, Java, Python)
