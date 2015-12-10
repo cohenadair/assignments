@@ -1,0 +1,22 @@
+Demo
+	- movement controls
+	- scoring system
+	- each powerup
+	- finding the key
+	- solving the maze
+
+Programming
+	- maze file
+	- player-wall-powerup collision detection
+		- Maze.cpp line 136
+		- isNear* methods called each time the player moves
+	- movement
+		- glTranslate in the correct x/z direction depending on the players' current angle
+	- turning
+		- similar to rubix cube side rotation
+		- player's angle is slightly increased each frame until the turn is complete
+		- glRotate on the player's angle
+	- hud
+		- boolean flags to display different elements
+		- elements are png images (much simpler than trying to draw text with OpenGL)
+		- 2D overlay drawing (if asked) GLUtils.cpp line 96

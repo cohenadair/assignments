@@ -14,3 +14,7 @@ Classes included (in order taken):
 * CS326 Object Oriented Design
 * CS422 Algorithm Analysis
 * CS442 Advanced Networking (C, Java, Python)
+* CS426 Operating Systems (C)
+* CS495 Video Game Programming (C++, OpenGL)
+* CS345 Android Programming (Java)
+

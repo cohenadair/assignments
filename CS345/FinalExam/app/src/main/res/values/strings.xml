@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FinalExam</string>
+    <string name="input_hint">Enter a number</string>
+    <string name="add_button">Add</string>
+    <string name="average_button">Average</string>
+    <string name="educat_button">Educat</string>
+    <string name="okay">Okay</string>
+    <string name="msg_average">The average is</string>
+</resources>

@@ -1,0 +1,26 @@
+Pseudo Processor Specification
+
+	Registers
+		PC
+		SP
+		FP
+		R0
+		R1
+		R2
+		resv1
+		resv2
+
+	Op Codes
+		signed and unsigned arithmetic
+		move reg, mem
+		move mem, reg
+		move mem, mem
+
+		branch
+		branchConditional
+
+		call addr	-- subroutine call
+
+		swi			-- software interrupt (for system calls)
+
+	Interrupts

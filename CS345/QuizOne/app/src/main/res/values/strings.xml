@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QuizOne</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="no_mood_yet">No mood yet</string>
+    <string name="sad">Sad</string>
+    <string name="mad">Mad</string>
+    <string name="happy">Happy</string>
+</resources>

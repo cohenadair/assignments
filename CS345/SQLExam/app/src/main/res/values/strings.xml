@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SQLExam</string>
+
+    <string name="insert_button">Insert</string>
+    <string name="update_button">Update</string>
+    <string name="delete_button">Delete</string>
+    <string name="action_settings">Settings</string>
+</resources>
