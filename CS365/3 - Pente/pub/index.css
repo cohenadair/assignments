@@ -1,0 +1,25 @@
+body {
+	width: 520px;
+	margin: auto;
+	padding-bottom: 50px;
+}
+
+.black {
+	color: black;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+
+.lime {
+	color: lime;
+}
+
+.center {
+	text-align: center;
+}

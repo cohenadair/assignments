@@ -1,0 +1,21 @@
+- John is hungry. What should John do?
+	X 1. Eat
+		- John doesn't have any food. What should he do?
+			X 1. Go to the store.
+				- John is at the store. What should be buy?
+					X 1. Bread
+						- Should he buy peanut butter?
+							1. No
+								John is sad eating plain bread.
+							2. Yes
+								John is happy eating peanut butter on his bread.
+					X 2. Steak
+						- Does John want BBQ sauce?
+							1. No
+								John is sad eating a plain steak.
+							2. Yes
+								John is happy eating steak with BBQ sauce.
+			X 2. Starve.
+				John is sad and hungry.
+	X 2. Starve
+		John is sad he is hungry.

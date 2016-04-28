@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ 	<head>
+ 		<title>The Clever Cook</title>
+		<link rel="stylesheet" href="index.css">
+		<script src="jquery.js"></script>
+		<script src="index.js"></script>
+ 	</head>
+	
+	<body>
+		<div>
+			<h1 class="text-center">The Clever Cook</h1>
+			<hr>
+			<p>You are a cook who needs to measure out exactly 4 cups of wine. The trouble is you only have a 3 cup container, a 5 cup container, and a whole vat of wine. Figure out how to measure out exactly 4 cups of wine. Keep in mind that when transferring wine, you will never spill a drop.</p>
+		</div>
+
+		<div id="cup-container">
+			<div class="cup text-center">
+				<div class="title">3 Cups</div>
+				<div id="three-cup-description" class="subtitle">0/0 filled</div>
+				<img id="three-cup" src="0OutOf3.jpg" width="300" height="225"/>
+				<button id="fill-3" class="btn">Fill from vat</button>
+				<button id="empty-3" class="btn">Empty to vat</button>
+				<button id="pour-3" class="btn">Pour into 5 cup container</button>
+			</div>
+			
+			<div class="cup text-center right">
+				<div class="title">5 Cups</div>
+				<div id="five-cup-description" class="subtitle">0/0 filled</div>
+				<img id="five-cup" src="0OutOf5.jpg" width="300" height="225"/>
+				<button id="fill-5" class="btn">Fill from vat</button>
+				<button id="empty-5" class="btn">Empty to vat</button>
+				<button id="pour-5" class="btn">Pour into 3 cup container</button>
+			</div>
+		</div>
+
+		<p id="finished" class="text-center">
+			Congratulations! You've successfully measured out 4 cups.
+		</p>
+	</body>
+</html>
+

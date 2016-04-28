@@ -1,0 +1,58 @@
+body {
+	width: 75%;
+	margin: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+#cup-container {
+	margin: auto;
+	width: 700px;
+}
+
+	#cup-container p {
+		font-weight: bold; 
+	}
+
+	.cup {
+		display: inline-block;
+		width: 350px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.cup .btn {
+		display: block;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+.right {
+	float: right;
+}
+
+	.right:after {
+		clear: both;
+	}
+
+.title {
+	font-weight: bold;
+}
+
+.subtitle {
+	padding: 5px;
+}
+
+
+
+

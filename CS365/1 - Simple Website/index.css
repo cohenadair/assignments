@@ -1,0 +1,18 @@
+h1 {
+	border: 1px solid black;
+	background-image: url("bg.png");
+	color: green;
+}
+
+h2 {
+	background-color: yellow;
+	font-style: italic;
+}
+
+h1, h2 {
+	padding: 25px;
+}
+
+p { 
+	margin: 25px;
+}

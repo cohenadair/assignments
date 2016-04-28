@@ -17,4 +17,6 @@ Classes included (in order taken):
 * CS426 Operating Systems (C)
 * CS495 Video Game Programming (C++, OpenGL)
 * CS345 Android Programming (Java)
+* CS365 Web Programming (JavaScript, Node.js)
+* CS480 Senior Project (Java, Android)
 

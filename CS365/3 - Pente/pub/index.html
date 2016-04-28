@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Pente</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+		<script src="client.js" type="text/javascript"></script>
+		<script src="game.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1 class="center">Pente</h1>
+		<hr>
+		<br>
+
+		<div id="opponent"></div>
+		<br>
+		<div id="status"></div>
+		<div id="msg"></div>
+		<div id="turn"></div>
+		<br>
+		<div id="p1-caps"></div>
+		<div id="p2-caps"></div>
+		<br>
+		<canvas width="520" height="520"></canvas>
+		<br>
+		<h3>Rules</h3>
+		<ul>
+			<li>The winner is the first player to place 5 pieces in a row (horizontally, vertically, or diagonally) or make 5 captures. If the board is full, the game ends in a draw.</li>
+			<li>A capture occurs if a Player A surrounds or blocks in 2 pieces from Player B.</li>
+			<li>If a player moves into a capture (i.e. their move results in themselves being captured), that capture does not count for the opposing player.</li>
+		</ul>
+	</body>
+</html>
