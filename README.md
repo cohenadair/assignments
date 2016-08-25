@@ -1,9 +1,11 @@
-Assignments
-===========
+# Assignments
 
 Programming assignments throughout my four years at Northern Michigan University.
 
-Classes included (in order taken):
+## Classes
+
+> Classes are listed in order taken.
+
 * CS122 Programming II (Java)
 * CS201 Programming in C++
 * CS330 Micro Architecture (Assembly)
@@ -19,4 +21,10 @@ Classes included (in order taken):
 * CS345 Android Programming (Java)
 * CS365 Web Programming (JavaScript, Node.js)
 * CS480 Senior Project (Java, Android)
+
+## Disclaimer
+
+I acknowledge that all assignments in this repository are property of Northern Michigan University, and will be removed from public access upon request from the university.
+
+
 
